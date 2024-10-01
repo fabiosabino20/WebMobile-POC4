@@ -15,3 +15,5 @@
 Este repositório faz parte do projeto do semestre para a matéria "Web Mobile" do curso de Sistemas da Informação.
 
 # POC 4 - Fetch
+
+Documentação da API: https://rickandmortyapi.com/documentation/ 
