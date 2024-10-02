@@ -1,12 +1,17 @@
-var form = document.getElementById('formulario');
-var campo = document.getElementById('campo');
+const btn = document.querySelector("#send")
 
-form.addEventListener('submit', function(e) {
-    // alerta o valor do campo
-    getCharacter(`https://rickandmortyapi.com/api/character/${campo.value}`)
+btn.addEventListener("click", function(e) {
 
-    // impede o envio do form
     e.preventDefault();
+
+    const id = document.querySelector("#charId")
+
+    const value = id.value
+
+    // console.log(value)
+
+    getCharacter(`https://rickandmortyapi.com/api/character/${value}`)
+    
 });
 
 async function getCharacter( endpoint ) {
@@ -22,16 +27,19 @@ async function getCharacter( endpoint ) {
         let origem = data.origin.name
         
         let content = document.getElementById('content')
-        content.innerHTML += `<img src='${urlIMG}' />`
-        content.innerHTML += `<h1>Name: ${nome}</h1>`
-        content.innerHTML += `<h2>Status: ${status}</h2>`
-        content.innerHTML += `<h2>Species: ${especie}</h2>`
-        content.innerHTML += `<h2>Gender: ${genero}</h2>`
-        content.innerHTML += `<h2>Origin: ${origem}</h2>`
+        
+        content.innerHTML = `
+            <img src='${urlIMG}' />
+            <h1>Name: ${nome}</h1>
+            <h2>Status: ${status}</h2>
+            <h2>Species: ${especie}</h2>
+            <h2>Gender: ${genero}</h2>
+            <h2>Origin: ${origem}</h2>
+        `;
 
     } catch(error) {
         console.log(error)
     } finally {
-        console.log("FIM")
+        console.log("Personagem mostrado")
     }
 }
