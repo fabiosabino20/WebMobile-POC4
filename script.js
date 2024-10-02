@@ -26,10 +26,12 @@ async function getCharacter( endpoint ) {
         let genero = data.gender
         let origem = data.origin.name
         
+        let foto = document.getElementById('imagem')
         let content = document.getElementById('content')
+
+        foto.innerHTML = `<img src='${urlIMG}' />`
         
         content.innerHTML = `
-            <img src='${urlIMG}' />
             <h1>Name: ${nome}</h1>
             <h2>Status: ${status}</h2>
             <h2>Species: ${especie}</h2>
