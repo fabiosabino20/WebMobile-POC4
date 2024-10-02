@@ -3,14 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>POC 4 - Fetch</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <form action="">
-        <label for="charID">Digite um número entre 1 e 826: </label>
-        <input type="text" id="charId" name="charId">
-        <input type="submit" id="send" value="Enviar"><br><br>
-    </form>
-    <div id="content"></div>
+    <div style="display: flex; flex-direction: row; gap: 50px; justify-content: center; align-items: center; height: 100%;">
+        <div>
+            <img src="content/logo.png" width="700px">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 20px; color:white">
+            <div>
+                <form action="">
+                    <div style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 10px">
+                        <p style="font-size: 28px; margin: 0; line-height: 1;">
+                            <label for="charID">Digite um número entre 1 e 826: </label>
+                        </p>
+                        <div>
+                            <input type="text" id="charId" name="charId" style="height: 20px; font-size: 18px; padding: 5px;" placeholder="Número">
+                            <input type="submit" id="send" value="Enviar" style="height: 30px; font-size: 18px;">
+                        </div>        
+                    </div>
+                </form>   
+            </div>         
+            <div class="container">
+                <div class="card">
+                    <div id="imagem"></div>
+                    <div id="content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
